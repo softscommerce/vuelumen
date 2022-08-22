@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "modern-rhythm-341205",
+  "private_key_id": "d7ae549243b8fe24e6167dc0d73f86b5322b7eb0",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDS5opJbc/q0nck\nq/U3L6LfGDQWPB0M9ExkevnZK7upJs6DkE7jyxYmV3FX2VQ7Q0fgzUOBjLRgTvBd\n3rYKNzbjHIAFx5PrZtk1FWV2f2aF2SndQGxNntQ2WUmd0DkKdu5ADCb5TR6QXnbQ\nprxPbNfWTKmu1W5gGNCiekBve8d2VWEVItUrIhPjMUcw8pmUJnwRzhW7jk7BkzOg\nqQMS06XVSnNlEmbu44pcn8UEK8Rl31Kb8LByn2r2qAb6tmR7zVJ6nhF8lz0SaEWW\n1GQck+Q/x7qYIwi+rZdFGvtVW6q2gs5OsetZ1cbNTmqgAWYFyBesT7SyKINw8514\nPJvz0hunAgMBAAECggEAYIZpZmAfGB+JrjwRuFdSGP9v33lV5nbte9OZBJ9yfWGo\nhSiIItPxaEz/MDDkz1bkz+vCaMmoSKf4dU4YTSamNV327i5A8i2ZXiVT0d9PYhVZ\nhs0UhJYcFF/bRKJnaPWz55ZoRBPa2EKT6L1XVJbBVnCx/LXslYjl/GctlJi3Wt22\nF1rWyA3JrmXOjlW2RAyQG3HjIj8u0VBFu3/HnQ4J/ZhpXQZvjytrZEDI6BSjLEdg\n0At4iazexrikx95B008lW8J4zQUBIUzej73RGC3qlCq/A6qfoXWcd3DjQ6Gd2ddo\nKR5326h7FfwCm7pVWW0WTaHa6mkXkSfjdxW8uTEhgQKBgQDt3LJzt2R0f5txqJeG\nBoJRd5KIbPP+3kGKLeyM7SrJtBuIaWuCNm+tgoIuZpCFEnPB/BwERCAqb8cHTYlA\n5wBQQbupALNkdlUDmTcvGr260pF4AH83E9AdlnMq0Qh2GOZ8FtFLLp9+8F6r/FGQ\nHshmQIT3mpWZrgUldW9PMfzkwQKBgQDi+4brd/O32RifALx4SoIjEyLSZQ4V4avH\nriRp881yr5LeaFgAb61JzQwf93So2az7qeQMGA5D3hD+cW7GHMBNothH+IqzB05P\nmTDgdkAj07y5QY2Mntz7HrJf4RlNN6tXoiNpCq7lZMH+SzmAIU31hbO9x/hbgITJ\nQOYr95ySZwKBgQCZfRqiVSs7icSS2Um9sKGTVGd4JWZlhqIgOnY0ki5ULia+Jdi8\nE8iI3HiI3KJRXJDaEoc5sYRYHfz+l2gEO4wWPfSMn+ki4MEHK21SthzMW2iHWTq+\nHcjj7tuuO2kMXBEO7eJsc090qENPE+jF6TdD1Ep5RIVYv9SOUXNcVVNtgQKBgQCb\nFdSHijvBf9msuioL3oywPmDqdBV9qeVe14MVyXi0RXYJ9C08jxFNfYYtSTwyKhhh\nEyE3ijAk+tONph9TyU0zPnKcKhtKW1GMXVTh6KnGUON/iGSYkerWwZCKphhNhB3U\nEHo1SRFats89WlR9UUQc3y+CGeF9U4Bmqasam2IlPQKBgQCMbacWly52SM7CQXjV\nNLGNZVkaa3jcI9Reunl0tfTfvoaDpI/i+H3KvwEHENr/Mov9DQ3lPCtJT6r9AhLk\n4asDLNOJeqCLC9SWPCnk1NfA27EQR5uy90ff/Oqydc+gDbOZaDdOMT7jOrg+nvh8\nYvxxtLOKUERL3wzb4UgOozKCvQ==\n-----END PRIVATE KEY-----\n",
+  "client_email": "sc-bd-assets-630@modern-rhythm-341205.iam.gserviceaccount.com",
+  "client_id": "110680293370220665935",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/sc-bd-assets-630%40modern-rhythm-341205.iam.gserviceaccount.com"
+}

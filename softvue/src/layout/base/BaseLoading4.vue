@@ -1,0 +1,52 @@
+<template>
+    <div class="spinner">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</template>
+<style scoped>
+.spinner {
+    --gap: 5px;
+    --clr: #fff;
+    --height: 12px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap);
+}
+
+.spinner span {
+    background: var(--clr);
+    width: 6px;
+    height: var(--height);
+    animation: grow 1s ease-in-out infinite;
+}
+
+.spinner span:nth-child(2) {
+    animation: grow 1s ease-in-out 0.15s infinite;
+}
+
+.spinner span:nth-child(3) {
+    animation: grow 1s ease-in-out 0.3s infinite;
+}
+
+.spinner span:nth-child(4) {
+    animation: grow 1s ease-in-out 0.475s infinite;
+}
+
+@keyframes grow {
+
+    0%,
+    100% {
+        transform: scaleY(1);
+    }
+
+    50% {
+        transform: scaleY(1.8);
+    }
+}
+</style>
