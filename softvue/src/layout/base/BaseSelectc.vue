@@ -2,7 +2,7 @@
 <div>
     <label for="">{{label}}</label>
 
-    <div class="custom-select" :tabindex="tabindex" @blur="open = false">
+    <div class="custom-select" :tabindex="tabindex" @blur="open = false" >
     <div class="selected" :class="{ open: open }" @click="open = !open">
       {{ selected }}
     </div>
@@ -13,7 +13,7 @@
         @click="
           selected = option.name.en;
           open = false;
-          $emit('input', option.id);
+          $emit('input', option.gid);
         "
         
       >

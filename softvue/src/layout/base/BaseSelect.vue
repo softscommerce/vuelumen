@@ -1,9 +1,9 @@
 <template>
 <div>
-    <label for="">{{label}}</label>
+    <label for="">{{label}} <span v-if="star" >*</span></label>
 
-    <div class="custom-select" :tabindex="tabindex" @blur="open = false">
-    <div class="selected" :class="{ open: open }" @click="open = !open">
+    <div class="custom-select"  :tabindex="tabindex" @blur="open = false">
+    <div class="selected" :class="[{'errors':validation}, { open: open }]" @click="open = !open">
       {{ selected }}
     </div>
     <div class="items" :class="{ selectHide: !open }">
@@ -13,7 +13,7 @@
         @click="
           selected = option.name;
           open = false;
-          $emit('input', option.id);
+          $emit('input', option.gid);
         "
         
       >
@@ -21,6 +21,8 @@
       </div>
     </div>
   </div>
+
+   <span class="errorMessage" v-if="validation">{{validation}}</span>
 </div>
  
 </template>
@@ -46,6 +48,14 @@ export default {
       required: false,
       default: 0,
     },
+     star: {
+            type: Boolean,
+            default:false,
+     },
+    validation:{
+             type: String,
+            default: '',
+        }
   },
   data() {
     return {
@@ -58,17 +68,33 @@ export default {
     };
   },
   mounted() {
-    this.$emit("input", this.selected);
+  //   window.setTimeout(() => {
+  //     this.selected = this.default;
+  //     console.log(this.selected);
+  // }, 1500);
+   this.$emit("input", this.selected);
+    
   },
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+
+.errors{
+    border: 1px solid tomato !important;
+     box-shadow: none !important;
+}
+.errorMessage{
+    color: tomato;
+}
 label{
     margin-bottom: 8px;
     display: inline-block;
     color: #555;
     font-size: 16px;
+    span{
+      color:red;
+    }
 }
 .custom-select {
   position: relative;

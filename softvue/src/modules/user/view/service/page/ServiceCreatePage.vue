@@ -41,7 +41,8 @@
 
                          <BaseSelectc 
                             label="Category"
-                            :options="categories"
+                                :key="category_update"
+                                :options="categories"
                                 :default="'Category'"
                                 class="select"
                                 @input="displayToCategory($event)"
@@ -156,6 +157,7 @@ export default {
         const business_name = ref('');
         const address = ref('');
         const paynow = ref('paynow');
+        const category_update = ref(0);
 
 
         const get_mobile = ref(['']);
@@ -165,10 +167,12 @@ export default {
 
 
          const displayToKey  = (event) =>{
-            console.log(event);
+            category_update.value++;
+            
             select_change.value = event;
             if(event != 'Work Station'){
              getcategories(event);
+             
             }
             }
 
@@ -205,6 +209,7 @@ export default {
         const getworstations = async () =>{
             try{
                 const datas = await axios.get('/api/user/work_station');
+                console.log(datas.data)
                 if(datas.data){
                     data.value = datas.data;
                 }else{
@@ -219,7 +224,8 @@ export default {
 
          const getcategories = async (id) =>{
             try{
-                const category = await axios.get(`/api/user/get_categories/${id}`);
+                const category = await axios.get(`/api/users/get_categories/${id}`);
+                console.log(category.data)
                 if(category.data){
                     categories.value = category.data;
                 }else{
@@ -379,6 +385,8 @@ export default {
             displayToKey,
             displayToCategory,
             displayToCommunity,
+            getworstations,
+            category_update
             
             
             

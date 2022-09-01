@@ -9,7 +9,7 @@
             <div class="scroll">
                 <ul class="items">
                     <li class="item">
-                        <router-link to="" class="link">
+                        <router-link to="/" class="link">
                             <div class="text">
                                 <span class="icon">
                                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -86,63 +86,30 @@
                         </router-link>
                         <ul class="_items" :class="[menuDataShow ? 'dropdown':'']">
                             <li class="_item">
-                                <router-link to="" class="_link">
+                                <router-link to="/admin/products/add" class="_link">
                                     <div class="_text">
                                         <span class="_icon"></span>
-                                        <span class="_txt">Product 1</span>
+                                        <span class="_txt">Add Product</span>
                                     </div>
                                     <span class="_arrow"></span>
                                 </router-link>
                             </li>
                             <li class="_item">
-                                <router-link to="" class="_link">
+                                <router-link to="/admin/products" class="_link">
                                     <div class="_text">
                                         <span class="_icon"></span>
-                                        <span class="_txt">Product 2</span>
+                                        <span class="_txt">View Product</span>
                                     </div>
                                     <span class="_arrow"></span>
                                 </router-link>
                             </li>
-                            <li class="_item">
-                                <router-link to="" class="_link">
-                                    <div class="_text">
-                                        <span class="_icon"></span>
-                                        <span class="_txt">Product 3</span>
-                                    </div>
-                                    <span class="_arrow"></span>
-                                </router-link>
-                            </li>
-                            <li class="_item">
-                                <router-link to="" class="_link">
-                                    <div class="_text">
-                                        <span class="_icon"></span>
-                                        <span class="_txt">Product 4</span>
-                                    </div>
-                                    <span class="_arrow"></span>
-                                </router-link>
-                            </li>
-                            <li class="_item">
-                                <router-link to="" class="_link">
-                                    <div class="_text">
-                                        <span class="_icon"></span>
-                                        <span class="_txt">Product 5</span>
-                                    </div>
-                                    <span class="_arrow"></span>
-                                </router-link>
-                            </li>
-                            <li class="_item">
-                                <router-link to="" class="_link">
-                                    <div class="_text">
-                                        <span class="_icon"></span>
-                                        <span class="_txt">Product 6</span>
-                                    </div>
-                                    <span class="_arrow"></span>
-                                </router-link>
-                            </li>
+
+
+
                         </ul>
                     </li>
                     <li class="item" @click="MenuDataShow">
-                        <router-link to="" class="link">
+                        <router-link to="#" class="link">
                             <div class="text">
                                 <span class="icon">
                                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -170,7 +137,7 @@
                                             C30.03,46.12,29.36,45.14,29.35,44.04z"/>
                                     </svg>
                                 </span>
-                                <span class="txt">Services</span>
+                                <span class="txt">Brand</span>
                             </div>
                             <span class="arrow">
                                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -185,28 +152,19 @@
                         </router-link>
                         <ul class="_items" :class="[menuDataShow ? 'dropdown':'']">
                             <li class="_item">
-                                <router-link to="" class="_link">
+                                <router-link to="/admin/products/brand-add" class="_link">
                                     <div class="_text">
                                         <span class="_icon"></span>
-                                        <span class="_txt">Service 1</span>
+                                        <span class="_txt">Add Brand</span>
                                     </div>
                                     <span class="_arrow"></span>
                                 </router-link>
                             </li>
                             <li class="_item">
-                                <router-link to="" class="_link">
+                                <router-link to="/admin/products/brand" class="_link">
                                     <div class="_text">
                                         <span class="_icon"></span>
-                                        <span class="_txt">Sservice 2</span>
-                                    </div>
-                                    <span class="_arrow"></span>
-                                </router-link>
-                            </li>
-                            <li class="_item">
-                                <router-link to="" class="_link">
-                                    <div class="_text">
-                                        <span class="_icon"></span>
-                                        <span class="_txt">Service 3</span>
+                                        <span class="_txt">View Brand</span>
                                     </div>
                                     <span class="_arrow"></span>
                                 </router-link>
@@ -406,12 +364,11 @@ aside.main_sidebar {
                                     background-color: #3a3e44;
                                 }
                                 ._text {
-                                    ._icon {}
                                     ._txt {
                                         font-size: 12px;
                                         letter-spacing: 1px;
                                     }
-                                    ._arrow {}
+                                   
                                 }
                             }
                         }

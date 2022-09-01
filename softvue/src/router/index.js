@@ -3,8 +3,9 @@ const HomePage = () => import('@/components/main/HomePage.vue');
 const LoginPage = () => import('@/components/main/LoginPage.vue');
 const ServicePage = () => import('@/components/main/ServicePage.vue');
 const Test = () => import('@/components/main/Test.vue');
-import auth from '@/middleware/auth.js';
 import User from '../middleware/User'; 
+import auth from '@/middleware/auth.js';
+import admin from '@/middleware/admin';
 // import GeneralRoutes from "./router.js";
 // import PropertyRoutes from "./property.js";
 
@@ -38,17 +39,19 @@ const routes = [
     path: "/service",
     name: "Service-page",
     component: ServicePage,
-    meta:{
-      middleware:[auth]
-    }
   },
 
   {
     path: "/test",
     name: "test",
-    component: Test
+    component: Test,
+    meta:{
+      middleware:[auth],
+    }
   }
 ];
+
+
 
 // const needsAuth = false;
 

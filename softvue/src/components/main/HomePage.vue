@@ -62,7 +62,7 @@
                     </li>
 
                      <li class="item">
-                        <router-link to="/mypanel/service" class="link">Service</router-link>
+                        <router-link to="/admin/products" class="link">Products</router-link>
                     </li>
                 </ul>
             </div>

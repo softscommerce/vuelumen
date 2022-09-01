@@ -13,15 +13,30 @@ class AppStorage{
 
      storeExpaire(expaire){
       localStorage.setItem('expaire', expaire);
-   }
+      }
+
+      storeRole(role){
+         if(role){
+         localStorage.setItem('role_name', role);
+            }
+         }
+
+         storeRolev(rolev){
+            if(rolev){
+            localStorage.setItem('role_value', rolev);
+               }
+            }
+
+        
 
 
-
-     store(user, token, mobile, expaire){
+     store(user, token, mobile, expaire, role, rolev){
       this.storeToken(token);
       this.storeUser(user);
       this.storeMobile(mobile);
       this.storeExpaire(expaire);
+      this.storeRole(role);
+      this.storeRolev(rolev);
      }
 
      clear(){
@@ -29,6 +44,8 @@ class AppStorage{
         localStorage.removeItem('user');
         localStorage.removeItem('phone');
         localStorage.removeItem('expaire');
+        localStorage.removeItem('role_name');
+        localStorage.removeItem('role_value');
 
      }
 
@@ -40,6 +57,10 @@ class AppStorage{
      getUser(){
         return localStorage.getItem('user');
      }
+
+     getAdmin(){
+      return localStorage.getItem('role_name');
+   }
 
 }
 

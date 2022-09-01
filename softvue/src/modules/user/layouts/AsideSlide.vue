@@ -1,5 +1,6 @@
 <template>
-    <aside class="main_sidebar" :class="{'active':aside_control}">
+   <div>
+     <aside class="main_sidebar" :class="{'active':aside_control}">
         <div class="header">
             <div class="logo">
                 <img class="img" src="@/assets/sc.png" alt="Image">
@@ -7,8 +8,10 @@
         </div>
         <div class="body">
             <div class="scroll">
+                <!-- Main Menu -->
                 <ul class="items">
                     <li class="item">
+
                         <router-link to="" class="link">
                             <div class="text">
                                 <span class="icon">
@@ -42,8 +45,11 @@
                             <span class="arrow"></span>
                         </router-link>
                     </li>
-                    <li class="item" @click="MenuDataShow">
-                        <router-link to="" class="link">
+
+
+                    <li class="item tree">
+                        {{}}
+                        <router-link to="#" class="link">
                             <div class="text">
                                 <span class="icon">
                                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -71,30 +77,47 @@
                                             C30.03,46.12,29.36,45.14,29.35,44.04z"/>
                                     </svg>
                                 </span>
-                                <span class="txt">Products</span>
+                                <span class="txt">Service/Shop</span>
                             </div>
                             <span class="arrow">
-                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                        viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
-                                    <path class="st0" d="M63.99,18.92c-0.31,1.54-1.35,2.58-2.41,3.64c-8.72,8.67-17.42,17.36-26.12,26.05
-                                        c-1.38,1.38-2.96,1.95-4.88,1.36c-0.76-0.23-1.37-0.68-1.92-1.23C19.6,39.7,10.53,30.67,1.48,21.62c-2.38-2.38-1.83-5.99,1.13-7.38
-                                        c1.55-0.73,3.08-0.54,4.49,0.45c0.34,0.24,0.64,0.53,0.93,0.83c7.82,7.8,15.65,15.6,23.46,23.42c0.38,0.38,0.58,0.43,0.99,0.02
-                                        c7.85-7.86,15.72-15.7,23.59-23.56c1.36-1.36,2.94-1.94,4.82-1.34c1.44,0.46,2.39,1.44,2.88,2.88c0.07,0.2,0.03,0.46,0.23,0.61
-                                        C63.99,18,63.99,18.46,63.99,18.92z"/>
-                                </svg>
+                                
                             </span>
                         </router-link>
-                        <ul class="_items" :class="[menuDataShow ? 'dropdown':'']">
-                            <li class="_item">
+                        <!-- Submenu Start -->
+                        <ul class="_items">
+                            <li class="_item tree">
                                 <router-link to="" class="_link">
                                     <div class="_text">
                                         <span class="_icon"></span>
-                                        <span class="_txt">Product 1</span>
+                                        <span class="_txt">Brand</span>
                                     </div>
                                     <span class="_arrow"></span>
                                 </router-link>
+                                <!-- Sub Submenu Start -->
+                                <ul class="__items">
+                                    <li class="__item">
+                                        <router-link to="" class="__link">
+                                            <div class="__text">
+                                                <span class="__icon"></span>
+                                                <span class="__txt">Add Brand</span>
+                                            </div>
+                                            <span class="__arrow"></span>
+                                        </router-link>
+                                    </li>
+                                    <li class="__item">
+                                        <router-link to="" class="__link">
+                                            <div class="__text">
+                                                <span class="__icon"></span>
+                                                <span class="__txt">View Brand</span>
+                                            </div>
+                                            <span class="__arrow"></span>
+                                        </router-link>
+                                    </li>
+                                   
+                                </ul>
+                                <!-- Sub Submenu End -->
                             </li>
-                            <li class="_item">
+                            <li class="_item tree">
                                 <router-link to="" class="_link">
                                     <div class="_text">
                                         <span class="_icon"></span>
@@ -102,6 +125,37 @@
                                     </div>
                                     <span class="_arrow"></span>
                                 </router-link>
+                                <!-- Sub Submenu Start -->
+                                <ul class="__items">
+                                    <li class="__item">
+                                        <router-link to="" class="__link">
+                                            <div class="__text">
+                                                <span class="__icon"></span>
+                                                <span class="__txt">Service 1</span>
+                                            </div>
+                                            <span class="__arrow"></span>
+                                        </router-link>
+                                    </li>
+                                    <li class="__item">
+                                        <router-link to="" class="__link">
+                                            <div class="__text">
+                                                <span class="__icon"></span>
+                                                <span class="__txt">Service 2</span>
+                                            </div>
+                                            <span class="__arrow"></span>
+                                        </router-link>
+                                    </li>
+                                    <li class="__item">
+                                        <router-link to="" class="__link">
+                                            <div class="__text">
+                                                <span class="__icon"></span>
+                                                <span class="__txt">Service 3</span>
+                                            </div>
+                                            <span class="__arrow"></span>
+                                        </router-link>
+                                    </li>
+                                </ul>
+                                <!-- Sub Submenu End -->
                             </li>
                             <li class="_item">
                                 <router-link to="" class="_link">
@@ -140,8 +194,9 @@
                                 </router-link>
                             </li>
                         </ul>
+                        <!-- Submenu End -->
                     </li>
-                    <li class="item" @click="MenuDataShow">
+                    <li class="item tree">
                         <router-link to="" class="link">
                             <div class="text">
                                 <span class="icon">
@@ -172,18 +227,10 @@
                                 </span>
                                 <span class="txt">Services</span>
                             </div>
-                            <span class="arrow">
-                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                        viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
-                                    <path class="st0" d="M63.99,18.92c-0.31,1.54-1.35,2.58-2.41,3.64c-8.72,8.67-17.42,17.36-26.12,26.05
-                                        c-1.38,1.38-2.96,1.95-4.88,1.36c-0.76-0.23-1.37-0.68-1.92-1.23C19.6,39.7,10.53,30.67,1.48,21.62c-2.38-2.38-1.83-5.99,1.13-7.38
-                                        c1.55-0.73,3.08-0.54,4.49,0.45c0.34,0.24,0.64,0.53,0.93,0.83c7.82,7.8,15.65,15.6,23.46,23.42c0.38,0.38,0.58,0.43,0.99,0.02
-                                        c7.85-7.86,15.72-15.7,23.59-23.56c1.36-1.36,2.94-1.94,4.82-1.34c1.44,0.46,2.39,1.44,2.88,2.88c0.07,0.2,0.03,0.46,0.23,0.61
-                                        C63.99,18,63.99,18.46,63.99,18.92z"/>
-                                </svg>
-                            </span>
+                            <span class="arrow"></span>
                         </router-link>
-                        <ul class="_items" :class="[menuDataShow ? 'dropdown':'']">
+                        <!-- Submenu Start -->
+                        <ul class="_items">
                             <li class="_item">
                                 <router-link to="" class="_link">
                                     <div class="_text">
@@ -212,6 +259,7 @@
                                 </router-link>
                             </li>
                         </ul>
+                        <!-- Submenu End -->
                     </li>
                     <li class="item">
                         <router-link to="" class="link">
@@ -286,12 +334,13 @@
         </div>
     </aside>
     <div id="mobile_overly_site" @click="SiteOverlayHideBtn" :class="[SiteOverlay ? 'show' : '']"></div>
+   </div>
 </template>
 <script>
-import SetupStore from "../store/SetupStore.js";
+import AdminSetupStore from "../store/SetupStore.js";
 export default {
     setup() {
-        const { aside_control, SiteOverlay, SiteOverlayHideBtn } = SetupStore();
+        const { aside_control, SiteOverlay, SiteOverlayHideBtn } = AdminSetupStore();
 
         return {
             aside_control:aside_control(),
@@ -299,14 +348,28 @@ export default {
             SiteOverlayHideBtn,
         }
     },
-    data(){
-        return {
-            menuDataShow:false,
+    mounted() {
+        let item = document.querySelectorAll('.item');
+        let _item = document.querySelectorAll('._item');
+        // Menu
+        for(let i = 0; i < item.length; i++){
+            item[i].addEventListener("click", function() {
+                let item_r = document.querySelectorAll('.item');
+                for (let index = 0; index < item_r.length; index++) {
+                    item_r[index].classList.remove('drop');
+                }
+                this.classList.add('drop');
+            });
         }
-    },
-    methods: {
-        MenuDataShow(){
-            this.menuDataShow =! this.menuDataShow;
+        // Submenu
+        for(let i = 0; i < _item.length; i++){
+            _item[i].addEventListener("click", function() {
+               let _item_r = document.querySelectorAll('._item');
+               for (let index = 0; index < _item_r.length; index++) {
+                _item_r[index].classList.remove('sub_drop');
+               }
+                this.classList.add('sub_drop');
+            });
         }
     }
 }
@@ -343,10 +406,41 @@ aside.main_sidebar {
         }
     }
     .body {
+        height:100%;
         .scroll {
+            overflow-y: auto;
+            height: calc(100% - 60px);
             .items {
                 list-style: none;
                 .item {
+                    overflow: hidden;
+                    &.tree {
+                        .arrow {
+                            position: relative;
+                            &::after {
+                                position: absolute;
+                                content: '';
+                                background-image: url('@/assets/admin/icons/arrow/down-arrow.svg');
+                                top: 50%;
+                                right: 0;
+                                width: 9px;
+                                height: 9px;
+                                fill: #000;
+                                transform: translateY(-50%);
+                            }
+                        }
+                    }
+                    &.drop {
+                        .arrow {
+                            &::after {
+                                background-image: url('@/assets/admin/icons/arrow/up-arrow.svg');
+                            }
+                        }
+                        ._items {
+                            max-height: min-content;
+                            opacity: 1;
+                        }
+                    }
                     .link {
                         color: #fff;
                         text-decoration: none;
@@ -384,20 +478,46 @@ aside.main_sidebar {
                             }
                         }
                     }
+                    // Sub menu Css
                     ._items {
-                        background-color: #2a2e36;
+                        max-height: 0;
+                        opacity: 0;
                         overflow: hidden;
-                        height: 0;
+                        background-color: #2a2e36;
                         transition: all 0.3s ease 0s;
                         -webkit-transition: all 0.3s ease 0s;
-                        &.dropdown {
-                            height: fit-content;
-                        }
                         ._item {
+                            &.tree {
+                                ._arrow {
+                                    position: relative;
+                                    &::after {
+                                        position: absolute;
+                                        content: '';
+                                        background-image: url('@/assets/admin/icons/arrow/down-arrow.svg');
+                                        top: 50%;
+                                        right: 0;
+                                        width: 9px;
+                                        height: 9px;
+                                        fill: #000;
+                                        transform: translateY(-50%);
+                                    }
+                                }
+                            }
+                            &.sub_drop {
+                                ._arrow {
+                                    &::after {
+                                        background-image: url('@/assets/admin/icons/arrow/up-arrow.svg');
+                                    }
+                                }
+                                .__items {
+                                    max-height: min-content;
+                                    opacity: 1;
+                                }
+                            }
                             ._link {
                                 color: #fff;
                                 text-decoration: none;
-                                padding: 6px 30px;
+                                padding: 6px 16px 6px 30px;
                                 display: flex;
                                 align-items: center;
                                 justify-content: space-between;
@@ -406,16 +526,48 @@ aside.main_sidebar {
                                     background-color: #3a3e44;
                                 }
                                 ._text {
-                                    ._icon {}
+                                   
                                     ._txt {
                                         font-size: 12px;
                                         letter-spacing: 1px;
                                     }
-                                    ._arrow {}
+                                    
+                                }
+                            }
+                            // Sub Sub menu Css
+                            .__items {
+                                max-height: 0;
+                                opacity: 0;
+                                overflow: hidden;
+                                background-color: #191a1f;
+                                transition: all 0.3s ease 0s;
+                                -webkit-transition: all 0.3s ease 0s;
+                                .__item {
+                                    .__link {
+                                        color: #fff;
+                                        text-decoration: none;
+                                        padding: 6px 40px;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: space-between;
+                                        &:hover,
+                                        &.active {
+                                            background-color: #3a3e44;
+                                        }
+                                        .__text {
+                                            
+                                            .__txt {
+                                                font-size: 12px;
+                                                letter-spacing: 1px;
+                                            }
+                                            
+                                        }
+                                    }
                                 }
                             }
                         }
                     }
+                    
                 }
             }
         }

@@ -1,8 +1,11 @@
 <template>
     <div class="vue_input" :class="[divClass]">
-        <label :class="labelClass">{{ label }}</label>
-        <input class="field" :class="[classValue]" :type="type" :value="modelValue" :placeholder="placeholder"
-            @input="$emit('update:modelValue', $event.target.value)" />
+        <label :class="labelClass">{{ label }} <span v-if="star" >*</span></label>
+        <input class="field" :class="[classValue, {'errors':validation}]" :type="type" :value="modelValue" :placeholder="placeholder"
+        :readonly="readonly"
+        :required="required"
+        @input="$emit('update:modelValue', $event.target.value)" />
+        <span class="errorMessage" v-if="validation">{{validation}}</span>
     </div>
 </template>
 <script>
@@ -11,6 +14,19 @@ export default {
         label: {
             type: String,
             default: '',
+        },
+        required: {
+            type: Boolean,
+            default: false,
+        },
+        readonly: {
+            type: Boolean,
+            default: false,
+        },
+
+         star: {
+            type: Boolean,
+            default: false,
         },
         modelValue: {
             type: [String, Number],
@@ -35,6 +51,11 @@ export default {
             type: [String, Number],
             default: '',
         },
+
+        validation:{
+             type: String,
+            default: '',
+        }
     },
     setup() {
 
@@ -42,7 +63,13 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-
+input.errors{
+    border: 1px solid tomato !important;
+     box-shadow: none !important;
+}
+.errorMessage{
+    color: tomato;
+}
 .vue_input {
     width: 100%;
     label {
@@ -51,6 +78,9 @@ export default {
         color: #555;
         font-size: 16px;
         // text-shadow: 0 1px 1px #5b8fce;
+        span{
+            color: tomato;
+        }
     }
     input {
         width: 100%;

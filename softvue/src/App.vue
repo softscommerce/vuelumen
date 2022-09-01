@@ -1,8 +1,6 @@
 <template>
-<div>
   <router-view></router-view>
   <notification-list></notification-list>
-</div>
 
 </template>
 
@@ -18,7 +16,6 @@ export default{
   },
   created(){
     User.hasToken();
-    console.log(localStorage.getItem('expaire'));
     var nowTime = new Date().getTime();
     if( nowTime >= localStorage.getItem('expaire') * 1000){
       User.logOut();

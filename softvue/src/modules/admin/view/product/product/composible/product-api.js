@@ -2,8 +2,8 @@ import Axios from 'axios';
 const RESOURCE_NAME = '/api/admin/product/product';
 
 export default{
-    getAll() {
-        return Axios.get(RESOURCE_NAME);
+    getAll(data) {
+        return Axios.get(`${RESOURCE_NAME}?page=${data}`);
       },
       getInfo(id) {
         return Axios.get(`${RESOURCE_NAME}/${id}`);
@@ -20,6 +20,10 @@ export default{
 
       getAllProduct() {
         return Axios.get(RESOURCE_NAME+'/product');
+      },
+
+      allProductDelete(data) {
+        return Axios.post(`${RESOURCE_NAME}/delete`, data);
       },
       
 }

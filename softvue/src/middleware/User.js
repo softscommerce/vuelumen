@@ -8,6 +8,7 @@ class User{
         .then(res => {
             this.responseAfterLogin(res);
             router.go({name:'Home-page'});
+            console.log(router);
         })
         .catch(error => console.log(error.response.data))
     }
@@ -16,7 +17,7 @@ class User{
         axios.post('/api/register',data)
         .then(res => {
             this.responseAfterLogin(res)
-            router.push({name:'Home-page'});
+            router.go({name:'Home-page'});
             localStorage.removeItem('mobile');
         })
         .catch(error => console.log(error.response.data))
@@ -28,9 +29,11 @@ class User{
         const username = res.data.user.name;
         const mobile = res.data.user.mobile;
         const expaire = res.data.expires_in;
+        const role = res.data.role?.role_name;
+        const rolev = res.data.role?.role_value;
 
         if(Token.isValid(access_token)){
-            AppStorage.store(username, access_token, mobile, expaire);
+            AppStorage.store(username, access_token, mobile, expaire, role, rolev);
         }
     }
 
@@ -73,7 +76,7 @@ class User{
     }
 
     admin(){
-        return this.id() == 1;
+        return AppStorage.getAdmin() == 'admin';
     }
 
 

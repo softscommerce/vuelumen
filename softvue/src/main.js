@@ -40,6 +40,7 @@ import AdminFormModule from './modules/admin/view/form/index.js';
 //User module
 import UserModule from './modules/user/index.js';
 import UserServiceModule from './modules/user/view/service/index.js';
+// import UserProductModule from './modules/shop/views/product/index.js';
 
 
 import { registerModules } from './register-modules';
@@ -61,6 +62,7 @@ registerModules({
    // User
    user: UserModule,
    userservice: UserServiceModule,
+  //  userproduct: UserProductModule,
 });
 
 
